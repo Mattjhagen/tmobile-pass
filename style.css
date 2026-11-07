@@ -1,0 +1,70 @@
+/* --------------------------------------------------------------------------
+Magenta & Carbon Fiber Theme Stylesheet
+Created for Matthew Hagen GitHub Pages Landing Page
+-------------------------------------------------------------------------- */
+:root {
+--bg-deep: #070a12;
+--card-bg: rgba(13, 18, 30, 0.85);
+--magenta-primary: #ec4899;
+--magenta-glow: rgba(236, 72, 153, 0.35);
+--fiber-line-1: rgba(255, 255, 255, 0.03);
+--fiber-line-2: rgba(236, 72, 153, 0.06);
+}
+/* Base Body Styles with Carbon Fiber Pattern Background */
+body {
+background-color: var(--bg-deep);
+background-image:
+linear-gradient(135deg, var(--fiber-line-1) 25%, transparent 25%),
+linear-gradient(225deg, var(--fiber-line-1) 25%, transparent 25%),
+linear-gradient(45deg, var(--fiber-line-1) 25%, transparent 25%),
+linear-gradient(315deg, var(--fiber-line-1) 25%, transparent 25%),
+radial-gradient(circle at 50% 0%, rgba(236, 72, 153, 0.08) 0%, transparent 60%);
+background-size: 16px 16px, 16px 16px, 16px 16px, 16px 16px, 100% 100%;
+background-position: 0 0, 0 8px, 8px -8px, -8px 0px, 0 0;
+color: #f1f5f9;
+font-family: 'Inter', sans-serif;
+overflow-x: hidden;
+}
+/* Announcement Bar */
+.announcement-bar {
+background: linear-gradient(90deg, rgba(236, 72, 153, 0.15), rgba(168, 85, 247, 0.15));
+border-bottom: 1px solid rgba(236, 72, 153, 0.25);
+box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+/* Glassmorphism Fiber Card */
+.fiber-card {
+background: var(--card-bg);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid rgba(236, 72, 153, 0.25);
+box-shadow: 0 0 40px -10px var(--magenta-glow), 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+}
+/* Glowing Text */
+.glow-text {
+text-shadow: 0 0 16px rgba(236, 72, 153, 0.6);
+}
+/* Vibrant Magenta Fiber Action Button */
+.fiber-btn {
+background: linear-gradient(135deg, #ec4899 0%, #be185d 50%, #9333ea 100%);
+box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+position: relative;
+overflow: hidden;
+}
+.fiber-btn::after {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+transition: 0.5s;
+}
+.fiber-btn:hover::after {
+left: 100%;
+}
+.fiber-btn:hover {
+box-shadow: 0 15px 30px -5px rgba(236, 72, 153, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+transform: translateY(-2px);
+}
