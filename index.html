@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Hagen | Founder of VibeCode</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#090d16',
+                        darkCard: '#111827',
+                        accentBlue: '#3b82f6',
+                        accentPurple: '#8b5cf6'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #090d16;
+            color: #f8fafc;
+        }
+        .glow-effect {
+            box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.25);
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="min-h-full flex flex-col justify-between selection:bg-blue-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 border-b border-blue-500/20 py-2.5 px-4 text-center text-xs font-medium text-blue-300">
+        <span class="inline-flex items-center space-x-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Available for networking & collaboration • Founder @ VibeCode</span>
+        </span>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-md w-full mx-auto px-4 py-8 sm:py-12 flex-1 flex flex-col items-center justify-center">
+
+        <!-- Profile Card Box -->
+        <div class="w-full bg-slate-900/80 backdrop-blur-xl border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl glow-effect text-center relative overflow-hidden">
+            
+            <!-- Background Ambient Glow -->
+            <div class="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Avatar / Photo -->
+            <div class="relative inline-block mb-4">
+                <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl p-1 bg-gradient-to-tr from-blue-500 to-purple-600 shadow-xl mx-auto">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Matthew Hagen" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/200x200/1e293b/ffffff?text=MH'">
+                </div>
+                <span class="absolute bottom-1 right-1 w-5 h-5 bg-emerald-500 border-2 border-slate-900 rounded-full flex items-center justify-center text-[10px]" title="Online">
+                    <i class="fa-solid fa-check text-white"></i>
+                </span>
+            </div>
+
+            <!-- Name & Title -->
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-1">Matthew Hagen</h1>
+            <p class="text-blue-400 font-medium text-sm mb-4">Founder @ VibeCode • D2D Sales & Tech</p>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-8 px-2">
+                Building cutting-edge digital experiences and high-performing sales frameworks. Tap below to text me directly!
+            </p>
+
+            <!-- PRIMARY ACTION: Direct SMS Text Link Button -->
+            <div class="space-y-3 mb-8">
+                <a href="sms:+15551234567?body=Hi%20Matthew,%20I%20found%20your%20business%20card%20via%20GitHub%20Pages!" 
+                   onclick="triggerConfetti()"
+                   class="w-full py-4 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold rounded-2xl shadow-lg shadow-blue-600/30 flex items-center justify-center space-x-3 transition transform active:scale-95 group">
+                    <div class="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center group-hover:rotate-12 transition">
+                        <i class="fa-solid fa-comment-sms text-lg"></i>
+                    </div>
+                    <span class="text-base tracking-wide">Text Me Directly</span>
+                </a>
+
+                <a href="tel:+15551234567" 
+                   class="w-full py-3 px-6 bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 text-slate-200 font-semibold rounded-2xl flex items-center justify-center space-x-2 transition text-sm">
+                    <i class="fa-solid fa-phone text-blue-400"></i>
+                    <span>Call Phone (+1 555-123-4567)</span>
+                </a>
+            </div>
+
+            <!-- Quick Links Grid -->
+            <div class="grid grid-cols-2 gap-3 mb-6">
+                <a href="mailto:matthew@vibecode.dev" class="p-3 bg-slate-800/50 hover:bg-slate-800 border border-slate-700/60 rounded-xl text-xs font-semibold text-slate-300 flex items-center justify-center space-x-2 transition">
+                    <i class="fa-solid fa-envelope text-blue-400"></i>
+                    <span>Email Me</span>
+                </a>
+                <a href="https://github.com" target="_blank" class="p-3 bg-slate-800/50 hover:bg-slate-800 border border-slate-700/60 rounded-xl text-xs font-semibold text-slate-300 flex items-center justify-center space-x-2 transition">
+                    <i class="fa-brands fa-github text-purple-400"></i>
+                    <span>GitHub Profile</span>
+                </a>
+            </div>
+
+            <!-- Save Contact Button (vCard download) -->
+            <button onclick="downloadVCard()" class="w-full py-2.5 px-4 bg-transparent hover:bg-slate-800/50 border border-dashed border-slate-700 text-slate-400 hover:text-white rounded-xl text-xs font-medium transition flex items-center justify-center space-x-2">
+                <i class="fa-solid fa-address-card"></i>
+                <span>Save Contact to Phone (.vcf)</span>
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-xs text-slate-500 border-t border-slate-900">
+        <p>© 2026 Matthew Hagen • Hosted on GitHub Pages</p>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-800 border border-slate-700 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center space-x-2 text-xs font-semibold">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toastMessage">Contact saved successfully!</span>
+    </div>
+
+    <!-- Script Utilities -->
+    <script>
+        function triggerConfetti() {
+            confetti({
+                particleCount: 60,
+                spread: 60,
+                origin: { y: 0.8 }
+            });
+        }
+
+        function downloadVCard() {
+            const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Matthew Hagen
+TITLE:Founder & D2D Sales Rep
+ORG:VibeCode / T-Mobile
+TEL:+15551234567
+EMAIL:matthew@vibecode.dev
+URL:https://mattyhagen.github.io
+END:VCARD`;
+
+            const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+            const url = window.URL.createObjectURL(blob);
+            const anchor = document.createElement('a');
+            anchor.href = url;
+            anchor.setAttribute('download', 'matthew_hagen.vcf');
+            document.body.appendChild(anchor);
+            anchor.click();
+            anchor.remove();
+
+            triggerConfetti();
+            showToast("vCard downloaded! Open file to import contact.");
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').innerText = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
