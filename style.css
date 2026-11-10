@@ -343,3 +343,19 @@ body {
     color: #52525b;
     margin-top: 8px;
 }
+
+
+/* Full-width touch-friendly mobile contact action */
+.btn-contact {
+    grid-column: 1 / -1;
+    min-height: 48px;
+    background: #27272a;
+    color: #fff;
+    border: 1px solid var(--magenta);
+    font-size: 15px;
+}
+.btn-contact:hover,
+.btn-contact:focus-visible {
+    background: var(--magenta);
+    color: #fff;
+}
